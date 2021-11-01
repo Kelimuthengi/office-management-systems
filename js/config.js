@@ -9,6 +9,6 @@ const firebaseConfig = {
     measurementId: "G-HM2ZJFX9LY"
   };
 
-//   initailizing
+//   iniit
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();

@@ -9,6 +9,7 @@ document.getElementById("signup").onclick = function() {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
 
         var user = userCredential.user;
+        window.location.href = "dashboard.html"
 
     }).catch( (error) => {
         var errorCode = error.code;
