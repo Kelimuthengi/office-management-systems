@@ -10,12 +10,15 @@ firebase.auth().onAuthStateChanged((user) => {
             var itemCode = document.getElementById("code").value;
             var color = document.getElementById("color").value;
 
-            firebase.firestore().collection("inventory").doc().set({
+          let docId = firebase.firestore().collection("inventory").doc()
+          docId.set({
 
                 itemName:name,
                 itemDesc:desc,
                 itemCode:itemCode,
-                itemColor:color
+                itemColor:color,
+                docId:docId.id,
+                userId:user.uid
                 
             }).then(() => {
                 window.location.href = "add-inventory.html"

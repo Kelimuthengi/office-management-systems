@@ -12,18 +12,31 @@ firebase.auth().onAuthStateChanged((user) => {
             let phoneNum = document.getElementById("phone").value;
             let department = document.getElementById("department").value;
             let portifolio = document.getElementById("portifolio").value;
+            let salary = document.getElementById("salary").value;
+            let accnum = document.getElementById("accnum").value;
+            let nextofkin = document.getElementById("nextofkin").value;
+            let nextofkinid = document.getElementById("nextofkinid").value;
 
-             firebase.firestore().collection("employees").doc().set( {
+
+            let userId = user.uid
+
+            let docId = firebase.firestore().collection("employees").doc();
+            docId.set( {
 
             employeeName:name,
             employeeId: Id,
             dateOfBirth:dob,
             phoneNum:phoneNum,
             department:department,
-            portifolio:portifolio
-        
+            portifolio:portifolio,
+            userId:userId,
+            docId:docId.id,
+            salary:salary,
+            accnum:accnum,
+            nextofkinName:nextofkin,
+            nextofkinid:nextofkinid
         }).then(() => {
-            window.location.reload();
+            window.location.href = "addemployee.html";
         }).catch((error) => {
             console.log(error)
         })
@@ -34,31 +47,3 @@ firebase.auth().onAuthStateChanged((user) => {
         window.location.href = "index.html"
     }
 })
-
-
-
-
-    
-
-
-
-
-
-
-
-// let datenow = new Date();
-// console.log(datenow)
-
-// //get current year
-// let year = new Date().getFullYear();
-
-// //get current daate
-// let month = new Date().getMonth();
-
-// let thedatenow = new Date().getDate();
-
-// //get current month
-
-// var fulldate = year + "-" +month + "-" + thedatenow;
-
-// console.log(fulldate;

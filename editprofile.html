@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <title>Employee</title>
+    <title>Edit Profile</title>
 </head>
 <body>
     <nav class="navbar navbar-expand nav-dark bg-secondary">
@@ -24,6 +24,7 @@
             </li>
         </ul>
     </nav>
+
 
     <section class="main">
         <div class="left1">
@@ -62,7 +63,7 @@
                 
                 <a class="mb-3" href="dashboard.html">
                     <i class="bi bi-book h3 mx-5"></i><span>Reports</span>
-                </a>
+                </div>
                 
                 <a class="mb-3" href="dashboard.html">
                     <i class="bi bi-person h3 mx-5"></i><span>My Account</span>
@@ -73,20 +74,17 @@
     
         <div class="right1">
             
-            <h1 class=" fw-bold text-center">Employee</h1>
+            <h1 class="text-darl">Update Profile</h1>
+            
+            <div class="container" >
+               <input type="text" class="form-control my-2" id="username" placeholder="Username">
+               <input type="text" class="form-control my-2" id="phone" placeholder="Phone">
 
-            <input type="text" placeholder="Employee Name" id="name" class="form-control mb-2">
-            <input type="text" placeholder="Enter Id Number" id="idNum" class="form-control mb-2">
-            <input type="date" placeholder="Enter date of birth" id="birthDate" class="form-control mb-2">
-            <input type="text" placeholder="Enter phone number" id="phone" class="form-control mb-2">
-            <input type="text" placeholder="Enter department" id="department" class="form-control mb-2">
-            <input type="text" placeholder="Enter portifolio" id="portifolio" class="form-control mb-2">
-            <input type="text" placeholder="Enter employee salary" id="salary" class="form-control mb-2">
-            <input type="text" placeholder="Enter Account number" id="accnum" class="form-control mb-2">
-            <input type="text" placeholder="Next of kin Name" id="nextofkin" class="form-control mb-2">
-            <input type="text" placeholder="Enter Next of kin Id" id="nextofkinid" class="form-control mb-2">
-            <button class=" btn btn-success" id="submit">submit</button>
-
+                <button id="update" class="btn btn-success m-5" >UPDATE</button>
+                
+            </div>
+        
+           
         </div>
     </section>
 
@@ -96,6 +94,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
     <script src="/js/config.js"></script>
-    <script src="/js/employee.js"></script>
+    <script src="/js/editprofile.js"></script>
 </body>
 </html>

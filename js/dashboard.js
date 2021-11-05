@@ -1,13 +1,36 @@
 firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+            // Inventory count
+        firebase.firestore().collection("inventory").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                let count = querySnapshot.size;
+                console.log(count)
 
-    if(user) {
+                document.getElementById("inventoryCount").innerHTML = count
+            })
+        })
 
-        // console.log(user.uid)
-        // console.log(user.email)
 
-    } else {
+        // Employee count
+        firebase.firestore().collection("employees").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                let count = querySnapshot.size;
+                document.getElementById("employeecount").innerHTML = count
+            })
+        });
+
+        // Contractors Count
+
+        firebase.firestore().collection("contractors").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                let count = querySnapshot.size;
+                document.getElementById("contractorsCount").innerHTML = count
+            })
+        })
         
-        window.location.href = "index.html";
-    }
 
+    }else {
+
+        window.location.href = "index.html"
+    }
 })

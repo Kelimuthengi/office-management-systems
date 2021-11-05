@@ -9,14 +9,18 @@ firebase.auth().onAuthStateChanged((user) => {
             var number = document.getElementById("phone").value;
             var email = document.getElementById("email").value;
 
-            firebase.firestore().collection("contractors").doc().set( {
+           let docId = firebase.firestore().collection("contractors").doc()
+           docId.set( {
                 contractorname:name,
                 companyName:company,
                 serivces:service,
                 phoneNumber:number,
-                userEmail:email
+                userEmail:email,
+                docId:docId.id,
+                userId:user.uid
             }).then(() => {
-                window.location.reload();
+                window.location.href = "addcontractors.html";
+                // window.location.href = "contractor.html";
             }).catch((error) => {
                 console.log(error)
             })

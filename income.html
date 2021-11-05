@@ -42,7 +42,7 @@
             <div class="container d-flex flex-column">
             <h5 class="text-secondary mx-5 mb-3">LISTINGS</h5>
                 
-                <a class="mb-3" href="">
+                <a class="mb-3" href="dashboard.html">
                     <i class="bi h3 mx-5  bi-ui-checks-grid"></i> <span class="text=secondary">Inventory</span>
                 </a>
                
@@ -60,13 +60,13 @@
                     <i class="bi bi-briefcase h3 mx-5 "></i><span>Income</span>
                 </a>
                 
-                <div class="mb-3">
+                <a class="mb-3" href="dashboard.html">
                     <i class="bi bi-book h3 mx-5"></i><span>Reports</span>
-                </div>
+                </a>
                 
-                <div class="mb-3">
+                <a class="mb-3" href="dashboard.html">
                     <i class="bi bi-person h3 mx-5"></i><span>My Account</span>
-                </div>
+                </a>
     
             </div>
         </div>
@@ -77,6 +77,12 @@
 
             <input type="text" placeholder="Enter Income Account" id="account" class="form-control mb-2">
             <input type="text" placeholder="Enter Income Type" id="incometype" class="form-control mb-2">
+            <label for="" class="label">Payment type</label>
+            <select name="" id="Payment" class="form-control">
+                <option value="Bank Payment">Bank Payment</option>
+                <option value="Lipa na Mpesa">Lipa na Mpesa</option>
+                <option value="Cash Payment">Cash Payment</option>
+            </select>
             <input type="text" placeholder="Enter Amount" id="amount" class="form-control mb-2">
             <button class=" btn btn-success" id="submit">submit</button>
 
