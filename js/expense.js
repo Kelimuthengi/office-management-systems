@@ -44,7 +44,8 @@ firebase.auth().onAuthStateChanged((user) => {
  
          //    pulling data where the item name is the same as the search input
  
-         firebase.firestore().collection("expenses").where("authorized", "==", searchInput).get()
+         firebase.firestore().collection("expenses")
+         .where("authorized", "==", searchInput).get()
          .then((querySnapshot) => {
              var content = '';
              querySnapshot.forEach((doc) => {

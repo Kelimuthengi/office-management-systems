@@ -24,7 +24,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
             // Editing a document
             document.getElementById("savechanges").onclick = function () {
-
+            // document.getElementById("saving").style.display = "block"
+            // document.getElementById("savechanges").style.display = "none"
                 var amount = document.getElementById("amount").value;
                 var spentOn = document.getElementById("spentOn").value;
                 var date = document.getElementById("date").value;

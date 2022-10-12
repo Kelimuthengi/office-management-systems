@@ -85,7 +85,10 @@
             <input type="text" placeholder="Enter Account number" id="accnum" class="form-control mb-2">
             <input type="text" placeholder="Next of kin Name" id="nextofkin" class="form-control mb-2">
             <input type="text" placeholder="Enter Next of kin Id" id="nextofkinid" class="form-control mb-2">
-            <button class=" btn btn-success" id="submit">submit</button>
+            <label for="" class="d-flex">Add Employee Image</label>
+            <input type="file" id="employeeimg">
+            <h3 id="imgprogress"></h3>
+            <button class=" btn btn-success m-3" id="submit">submit</button>
 
         </div>
     </section>
@@ -95,6 +98,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
     <script src="/js/config.js"></script>
     <script src="/js/employee.js"></script>
 </body>

@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 let nextOfKin = doc.data().nextofkinName
                 let nextOfKinId = doc.data().nextofkinid
                 let userDocId = doc.data().docId
+                let profilePic = doc.data().
 
                 if(docId == userDocId) {
                 document.getElementById("employeeid").innerHTML = employeeId;
@@ -27,10 +28,20 @@ firebase.auth().onAuthStateChanged((user) => {
                 document.getElementById("accountnum").innerHTML = accountnum;
                 document.getElementById("salary").innerHTML = salary;
                 document.getElementById("nextofkin").innerHTML = nextOfKin;
-                document.getElementById("nextofkindid").innerHTML = nextOfKinId
+                document.getElementById("nextofkindid").innerHTML = nextOfKinId;
+                document.getElementById("profilepicimg").src = 
                 }
-            })
-        })
+            });
+            
+            let editLink = "editanemployee.html" + "?" + docId
+            // EDIT EMPLOYEE
+            let content = ''
+            content += '<a class="btn btn-success mx-3" href="'+editLink+'" >EDIT</a>';
+            content += '<a href="addemployee.html" class="btn btn-dark">BACK</a>'
+            // content 
+             $('#btn-holder').append(content);
+        });
+
     }
 
     else {
